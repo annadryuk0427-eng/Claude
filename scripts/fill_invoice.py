@@ -171,6 +171,7 @@ def main():
                          ("пропозиція 1", tot[1.05], True), ("пропозиція 3", tot[1.1], False)):
         find(wb[name], "Сума прописом").value = f"Сума прописом {words(s, kop)}"
     find(wb["пропозиція 2"], "Всього на суму").value = f"Всього на суму: {words(tot[1.08])}"
+    wb.calculation.fullCalcOnLoad = True
     wb.save(a.dst)
     print(f"позицій {n}; рахунок {fmt_money(total)}; +5% {fmt_money(tot[1.05])}; "
           f"+8% {fmt_money(tot[1.08])}; +10% {fmt_money(tot[1.1])}")
