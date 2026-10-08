@@ -6,7 +6,7 @@
   "qty": 1,
   "price": 766,
   "manufacturer": "MANN",
-  "country": "",
+  "country": "Німеччина",
   "uktzed": "8421310000"
  },
  {
@@ -16,7 +16,7 @@
   "qty": 1,
   "price": 477,
   "manufacturer": "MAHLE",
-  "country": "",
+  "country": "Німеччина",
   "uktzed": "8421230090"
  },
  {
@@ -26,7 +26,7 @@
   "qty": 1,
   "price": 757,
   "manufacturer": "BOSCH",
-  "country": "",
+  "country": "Німеччина",
   "uktzed": "8421310000"
  },
  {
@@ -36,7 +36,7 @@
   "qty": 1,
   "price": 651,
   "manufacturer": "MAHLE",
-  "country": "",
+  "country": "Німеччина",
   "uktzed": "8421230090"
  },
  {
@@ -46,7 +46,7 @@
   "qty": 1,
   "price": 629,
   "manufacturer": "MAHLE",
-  "country": "",
+  "country": "Німеччина",
   "uktzed": "8421230090"
  },
  {
@@ -66,7 +66,7 @@
   "qty": 1,
   "price": 1041,
   "manufacturer": "BOSCH",
-  "country": "",
+  "country": "Німеччина",
   "uktzed": "8421230090"
  },
  {
@@ -76,7 +76,7 @@
   "qty": 1,
   "price": 855,
   "manufacturer": "MAHLE",
-  "country": "",
+  "country": "Німеччина",
   "uktzed": "8421230090"
  },
  {
@@ -106,7 +106,7 @@
   "qty": 1,
   "price": 532,
   "manufacturer": "SKF",
-  "country": "",
+  "country": "Швеція",
   "uktzed": "8708809900"
  },
  {
@@ -116,7 +116,7 @@
   "qty": 1,
   "price": 531,
   "manufacturer": "SKF",
-  "country": "",
+  "country": "Швеція",
   "uktzed": "8708809900"
  },
  {
@@ -166,7 +166,7 @@
   "qty": 1,
   "price": 532,
   "manufacturer": "SKF",
-  "country": "",
+  "country": "Швеція",
   "uktzed": "8708809900"
  },
  {
@@ -176,7 +176,7 @@
   "qty": 1,
   "price": 531,
   "manufacturer": "SKF",
-  "country": "",
+  "country": "Швеція",
   "uktzed": "8708809900"
  },
  {
@@ -246,7 +246,7 @@
   "qty": 2,
   "price": 582,
   "manufacturer": "SKF",
-  "country": "",
+  "country": "Швеція",
   "uktzed": "8708809900"
  },
  {
@@ -256,7 +256,7 @@
   "qty": 1,
   "price": 431,
   "manufacturer": "BOSCH",
-  "country": "",
+  "country": "Німеччина",
   "uktzed": "8421230090"
  },
  {
@@ -356,7 +356,7 @@
   "qty": 1,
   "price": 2242,
   "manufacturer": "FERODO",
-  "country": "",
+  "country": "Великобританія",
   "uktzed": "8708309100"
  },
  {
@@ -366,7 +366,7 @@
   "qty": 2,
   "price": 3771,
   "manufacturer": "KAYABA",
-  "country": "",
+  "country": "Японія",
   "uktzed": "8708803500"
  },
  {
@@ -376,7 +376,7 @@
   "qty": 1,
   "price": 921,
   "manufacturer": "SKF",
-  "country": "",
+  "country": "Швеція",
   "uktzed": "4016995200"
  },
  {
@@ -416,7 +416,7 @@
   "qty": 1,
   "price": 331,
   "manufacturer": "MANN",
-  "country": "",
+  "country": "Німеччина",
   "uktzed": "8421230090"
  },
  {
@@ -426,7 +426,7 @@
   "qty": 1,
   "price": 564,
   "manufacturer": "MAHLE",
-  "country": "",
+  "country": "Німеччина",
   "uktzed": "8421310000"
  },
  {
@@ -446,7 +446,7 @@
   "qty": 1,
   "price": 1410,
   "manufacturer": "VAG",
-  "country": "",
+  "country": "Німеччина",
   "uktzed": "8421392000"
  },
  {
@@ -456,7 +456,7 @@
   "qty": 1,
   "price": 264,
   "manufacturer": "VAG",
-  "country": "",
+  "country": "Німеччина",
   "uktzed": "7318159000"
  },
  {
@@ -466,7 +466,7 @@
   "qty": 1,
   "price": 2149,
   "manufacturer": "FERODO",
-  "country": "",
+  "country": "Великобританія",
   "uktzed": "8708309100"
  },
  {
@@ -506,7 +506,7 @@
   "qty": 2,
   "price": 780,
   "manufacturer": "VAG",
-  "country": "",
+  "country": "Німеччина",
   "uktzed": "4016995200"
  },
  {
@@ -526,7 +526,7 @@
   "qty": 2,
   "price": 2010,
   "manufacturer": "VAG",
-  "country": "",
+  "country": "Німеччина",
   "uktzed": "4016995200"
  },
  {
@@ -536,7 +536,7 @@
   "qty": 2,
   "price": 684,
   "manufacturer": "VAG",
-  "country": "",
+  "country": "Німеччина",
   "uktzed": "4016995200"
  },
  {
@@ -576,7 +576,7 @@
   "qty": 1,
   "price": 1578,
   "manufacturer": "BOSCH",
-  "country": "",
+  "country": "Німеччина",
   "uktzed": "8708309100"
  },
  {
@@ -586,7 +586,7 @@
   "qty": 2,
   "price": 510,
   "manufacturer": "MITSUBISHI",
-  "country": "",
+  "country": "Японія",
   "uktzed": "4016995200"
  },
  {
@@ -596,7 +596,7 @@
   "qty": 2,
   "price": 910,
   "manufacturer": "MITSUBISHI",
-  "country": "",
+  "country": "Японія",
   "uktzed": "4016995200"
  },
  {
@@ -606,7 +606,7 @@
   "qty": 4,
   "price": 144,
   "manufacturer": "MITSUBISHI",
-  "country": "",
+  "country": "Японія",
   "uktzed": "4016995200"
  },
  {
@@ -646,7 +646,7 @@
   "qty": 1,
   "price": 567,
   "manufacturer": "MAHLE",
-  "country": "",
+  "country": "Німеччина",
   "uktzed": "8421310000"
  },
  {
@@ -656,7 +656,7 @@
   "qty": 1,
   "price": 518,
   "manufacturer": "MAHLE",
-  "country": "",
+  "country": "Німеччина",
   "uktzed": "8421392000"
  },
  {
@@ -676,7 +676,7 @@
   "qty": 1,
   "price": 1163,
   "manufacturer": "BOSCH",
-  "country": "",
+  "country": "Німеччина",
   "uktzed": "8708309100"
  },
  {
@@ -686,7 +686,7 @@
   "qty": 1,
   "price": 1109,
   "manufacturer": "BOSCH",
-  "country": "",
+  "country": "Німеччина",
   "uktzed": "8708309100"
  },
  {
@@ -716,7 +716,7 @@
   "qty": 2,
   "price": 1291,
   "manufacturer": "MITSUBISHI",
-  "country": "",
+  "country": "Японія",
   "uktzed": "7318158890"
  },
  {
@@ -736,7 +736,7 @@
   "qty": 2,
   "price": 2053,
   "manufacturer": "BOSCH",
-  "country": "",
+  "country": "Німеччина",
   "uktzed": "8708309100"
  },
  {
@@ -746,7 +746,7 @@
   "qty": 1,
   "price": 1578,
   "manufacturer": "BOSCH",
-  "country": "",
+  "country": "Німеччина",
   "uktzed": "8708309100"
  },
  {
@@ -766,7 +766,7 @@
   "qty": 1,
   "price": 11993,
   "manufacturer": "LUK",
-  "country": "",
+  "country": "Німеччина",
   "uktzed": "8708939000"
  },
  {
