@@ -1,0 +1,802 @@
+[
+ {
+  "car": "L200 70-91",
+  "name": "Фільтр повітря",
+  "article": "C24011",
+  "qty": 1,
+  "price": 766,
+  "manufacturer": "MANN",
+  "country": "",
+  "uktzed": "8421310000"
+ },
+ {
+  "car": "L200 70-91",
+  "name": "Фільтр палива",
+  "article": "KX268D",
+  "qty": 1,
+  "price": 477,
+  "manufacturer": "MAHLE",
+  "country": "",
+  "uktzed": "8421230090"
+ },
+ {
+  "car": "L200 46-61",
+  "name": "Фільтр повітря",
+  "article": "1987429186",
+  "qty": 1,
+  "price": 757,
+  "manufacturer": "BOSCH",
+  "country": "",
+  "uktzed": "8421310000"
+ },
+ {
+  "car": "L200 46-61",
+  "name": "Фільтр палива",
+  "article": "KC46",
+  "qty": 1,
+  "price": 651,
+  "manufacturer": "MAHLE",
+  "country": "",
+  "uktzed": "8421230090"
+ },
+ {
+  "car": "L200 46-61",
+  "name": "Фільтр оливи",
+  "article": "OC540",
+  "qty": 1,
+  "price": 629,
+  "manufacturer": "MAHLE",
+  "country": "",
+  "uktzed": "8421230090"
+ },
+ {
+  "car": "Паджеро 51-44",
+  "name": "Фільтр повітря",
+  "article": "2005508",
+  "qty": 1,
+  "price": 426,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "8421310000"
+ },
+ {
+  "car": "Паджеро 51-44",
+  "name": "Фільтр палива",
+  "article": "F026402086",
+  "qty": 1,
+  "price": 1041,
+  "manufacturer": "BOSCH",
+  "country": "",
+  "uktzed": "8421230090"
+ },
+ {
+  "car": "Паджеро 51-44",
+  "name": "Фільтр оливи",
+  "article": "OC297",
+  "qty": 1,
+  "price": 855,
+  "manufacturer": "MAHLE",
+  "country": "",
+  "uktzed": "8421230090"
+ },
+ {
+  "car": "L200 46-17",
+  "name": "Кульова опора",
+  "article": "8250422607",
+  "qty": 2,
+  "price": 1145,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "8708809900"
+ },
+ {
+  "car": "L200 46-17",
+  "name": "Сайлентблок важеля",
+  "article": "872607",
+  "qty": 4,
+  "price": 691,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "4016995200"
+ },
+ {
+  "car": "L200 46-17",
+  "name": "Стійка стабілізатора",
+  "article": "VKDS845503",
+  "qty": 1,
+  "price": 532,
+  "manufacturer": "SKF",
+  "country": "",
+  "uktzed": "8708809900"
+ },
+ {
+  "car": "L200 46-17",
+  "name": "Стійка стабілізатора",
+  "article": "VKDS845502",
+  "qty": 1,
+  "price": 531,
+  "manufacturer": "SKF",
+  "country": "",
+  "uktzed": "8708809900"
+ },
+ {
+  "car": "L200 46-17",
+  "name": "Втулка стабілізатора",
+  "article": "872801",
+  "qty": 2,
+  "price": 163,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "4016995200"
+ },
+ {
+  "car": "L200 51-23",
+  "name": "Кульова опора",
+  "article": "8250422607",
+  "qty": 2,
+  "price": 1145,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "8708809900"
+ },
+ {
+  "car": "L200 51-23",
+  "name": "Піввісь",
+  "article": "DS6101",
+  "qty": 1,
+  "price": 3288,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "8708509900"
+ },
+ {
+  "car": "L200 51-23",
+  "name": "Піввісь",
+  "article": "DS6101",
+  "qty": 1,
+  "price": 4124,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "8708509900"
+ },
+ {
+  "car": "L200 51-23",
+  "name": "Стійка стабілізатора",
+  "article": "VKDS845502",
+  "qty": 1,
+  "price": 532,
+  "manufacturer": "SKF",
+  "country": "",
+  "uktzed": "8708809900"
+ },
+ {
+  "car": "L200 51-23",
+  "name": "Стійка стабілізатора",
+  "article": "VKDS845503",
+  "qty": 1,
+  "price": 531,
+  "manufacturer": "SKF",
+  "country": "",
+  "uktzed": "8708809900"
+ },
+ {
+  "car": "L200 51-23",
+  "name": "Втулка стабілізатора",
+  "article": "872801",
+  "qty": 2,
+  "price": 163,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "4016995200"
+ },
+ {
+  "car": "L200 51-23",
+  "name": "Амортизатор передній",
+  "article": "841006",
+  "qty": 2,
+  "price": 7261,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "8708803500"
+ },
+ {
+  "car": "L200 51-23",
+  "name": "Амортизатор задній",
+  "article": "553189",
+  "qty": 2,
+  "price": 2610,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "8708803500"
+ },
+ {
+  "car": "L200 46-74",
+  "name": "Втулка стабілізатора",
+  "article": "872801",
+  "qty": 2,
+  "price": 163,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "4016995200"
+ },
+ {
+  "car": "L200 46-74",
+  "name": "Тяга кермова",
+  "article": "SR7950",
+  "qty": 2,
+  "price": 662,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "8708949000"
+ },
+ {
+  "car": "L200 46-74",
+  "name": "Кульова опора",
+  "article": "8250422607",
+  "qty": 2,
+  "price": 1145,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "8708809900"
+ },
+ {
+  "car": "L200 46-74",
+  "name": "Кульова опора",
+  "article": "VKDS815501",
+  "qty": 2,
+  "price": 582,
+  "manufacturer": "SKF",
+  "country": "",
+  "uktzed": "8708809900"
+ },
+ {
+  "car": "VW 47-07",
+  "name": "Фільтр оливи",
+  "article": "0451203087",
+  "qty": 1,
+  "price": 431,
+  "manufacturer": "BOSCH",
+  "country": "",
+  "uktzed": "8421230090"
+ },
+ {
+  "car": "VW 47-07",
+  "name": "Вимикач ліхтаря",
+  "article": "A35519",
+  "qty": 1,
+  "price": 183,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "8536508000"
+ },
+ {
+  "car": "VW 47-07",
+  "name": "Важіль склоочисника",
+  "article": "2190453",
+  "qty": 1,
+  "price": 1577,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "8512909000"
+ },
+ {
+  "car": "VW 47-07",
+  "name": "Важіль склоочисника",
+  "article": "2190454",
+  "qty": 1,
+  "price": 1589,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "8512909000"
+ },
+ {
+  "car": "VW 47-07",
+  "name": "Кільце гумове ущільнювальне",
+  "article": "163480",
+  "qty": 25,
+  "price": 60,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "4016930000"
+ },
+ {
+  "car": "L200 47-32",
+  "name": "Опора двигуна",
+  "article": "GOM501",
+  "qty": 2,
+  "price": 741,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "4016995200"
+ },
+ {
+  "car": "L200 47-32",
+  "name": "Опора двигуна",
+  "article": "GOM504",
+  "qty": 1,
+  "price": 438,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "4016995200"
+ },
+ {
+  "car": "L200 47-32",
+  "name": "Опора двигуна",
+  "article": "80102146",
+  "qty": 1,
+  "price": 4873,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "4016995200"
+ },
+ {
+  "car": "Ford 63-43",
+  "name": "Гальмівний барабан",
+  "article": "2831-S",
+  "qty": 2,
+  "price": 1940,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "8708309100"
+ },
+ {
+  "car": "Ford 63-43",
+  "name": "Монтажний комплект колодок",
+  "article": "310114",
+  "qty": 1,
+  "price": 296,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "8708309100"
+ },
+ {
+  "car": "Ford 63-43",
+  "name": "Гальмівні колодки",
+  "article": "FSB4164",
+  "qty": 1,
+  "price": 2242,
+  "manufacturer": "FERODO",
+  "country": "",
+  "uktzed": "8708309100"
+ },
+ {
+  "car": "Сітроен 49-08",
+  "name": "Амортизатор передній",
+  "article": "3348139",
+  "qty": 2,
+  "price": 3771,
+  "manufacturer": "KAYABA",
+  "country": "",
+  "uktzed": "8708803500"
+ },
+ {
+  "car": "Сітроен 49-08",
+  "name": "Захисний комплект амортизатора",
+  "article": "VKDP33328T",
+  "qty": 1,
+  "price": 921,
+  "manufacturer": "SKF",
+  "country": "",
+  "uktzed": "4016995200"
+ },
+ {
+  "car": "Сітроен 49-08",
+  "name": "Накінечник керма",
+  "article": "3937801",
+  "qty": 1,
+  "price": 937,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "8708949000"
+ },
+ {
+  "car": "Сітроен 49-08",
+  "name": "Накінечник керма",
+  "article": "3937901",
+  "qty": 1,
+  "price": 941,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "8708949000"
+ },
+ {
+  "car": "Сітроен 49-08",
+  "name": "Опора двигуна",
+  "article": "9826533880",
+  "qty": 1,
+  "price": 8160,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "4016995200"
+ },
+ {
+  "car": "VW 61-92",
+  "name": "Фільтр оливи",
+  "article": "HU7008Z",
+  "qty": 1,
+  "price": 331,
+  "manufacturer": "MANN",
+  "country": "",
+  "uktzed": "8421230090"
+ },
+ {
+  "car": "VW 61-92",
+  "name": "Фільтр повітря",
+  "article": "LX786",
+  "qty": 1,
+  "price": 564,
+  "manufacturer": "MAHLE",
+  "country": "",
+  "uktzed": "8421310000"
+ },
+ {
+  "car": "VW 61-92",
+  "name": "Фільтр палива",
+  "article": "3184900",
+  "qty": 1,
+  "price": 1740,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "8421230090"
+ },
+ {
+  "car": "VW 61-92",
+  "name": "Фільтр салону",
+  "article": "7E0819631",
+  "qty": 1,
+  "price": 1410,
+  "manufacturer": "VAG",
+  "country": "",
+  "uktzed": "8421392000"
+ },
+ {
+  "car": "VW 50-18",
+  "name": "Заглушка",
+  "article": "N50813202",
+  "qty": 1,
+  "price": 264,
+  "manufacturer": "VAG",
+  "country": "",
+  "uktzed": "7318159000"
+ },
+ {
+  "car": "VW 50-18",
+  "name": "Гальмівні колодки",
+  "article": "FVR1642",
+  "qty": 1,
+  "price": 2149,
+  "manufacturer": "FERODO",
+  "country": "",
+  "uktzed": "8708309100"
+ },
+ {
+  "car": "VW 50-18",
+  "name": "Сайлентблок важеля",
+  "article": "829062910",
+  "qty": 2,
+  "price": 483,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "4016995200"
+ },
+ {
+  "car": "VW 50-18",
+  "name": "Сайлентблок важеля",
+  "article": "829063010",
+  "qty": 2,
+  "price": 511,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "4016995200"
+ },
+ {
+  "car": "VW 50-18",
+  "name": "Втулка стабілізатора",
+  "article": "42175",
+  "qty": 2,
+  "price": 322,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "4016995200"
+ },
+ {
+  "car": "VW 50-18",
+  "name": "Втулка стабілізатора",
+  "article": "7H0511413A",
+  "qty": 2,
+  "price": 780,
+  "manufacturer": "VAG",
+  "country": "",
+  "uktzed": "4016995200"
+ },
+ {
+  "car": "VW 50-18",
+  "name": "Упор",
+  "article": "55011623301",
+  "qty": 2,
+  "price": 101,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "4016995200"
+ },
+ {
+  "car": "VW 50-18",
+  "name": "Підкладка пружини",
+  "article": "7H0511149C",
+  "qty": 2,
+  "price": 2010,
+  "manufacturer": "VAG",
+  "country": "",
+  "uktzed": "4016995200"
+ },
+ {
+  "car": "VW 50-18",
+  "name": "Підкладка пружини",
+  "article": "7E0511150B",
+  "qty": 2,
+  "price": 684,
+  "manufacturer": "VAG",
+  "country": "",
+  "uktzed": "4016995200"
+ },
+ {
+  "car": "VW 50-18",
+  "name": "Тяга кермова",
+  "article": "27986",
+  "qty": 1,
+  "price": 3032,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "8708949000"
+ },
+ {
+  "car": "VW 50-18",
+  "name": "Тяга кермова",
+  "article": "27987",
+  "qty": 1,
+  "price": 3029,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "8708949000"
+ },
+ {
+  "car": "VW 50-18",
+  "name": "Пильник тяги керма",
+  "article": "3361601",
+  "qty": 2,
+  "price": 301,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "4016995200"
+ },
+ {
+  "car": "L200 77-60",
+  "name": "Гальмівні колодки",
+  "article": "0986494268",
+  "qty": 1,
+  "price": 1578,
+  "manufacturer": "BOSCH",
+  "country": "",
+  "uktzed": "8708309100"
+ },
+ {
+  "car": "L200 77-60",
+  "name": "Пильник амортизатора",
+  "article": "MR992325",
+  "qty": 2,
+  "price": 510,
+  "manufacturer": "MITSUBISHI",
+  "country": "",
+  "uktzed": "4016995200"
+ },
+ {
+  "car": "L200 77-60",
+  "name": "Відбійник амортизатора",
+  "article": "MB303069",
+  "qty": 2,
+  "price": 910,
+  "manufacturer": "MITSUBISHI",
+  "country": "",
+  "uktzed": "4016995200"
+ },
+ {
+  "car": "L200 77-60",
+  "name": "Втулка ресори",
+  "article": "MB584531",
+  "qty": 4,
+  "price": 144,
+  "manufacturer": "MITSUBISHI",
+  "country": "",
+  "uktzed": "4016995200"
+ },
+ {
+  "car": "L200 77-60",
+  "name": "Опора амортизатора",
+  "article": "107414",
+  "qty": 2,
+  "price": 1044,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "8708809900"
+ },
+ {
+  "car": "L200 77-60",
+  "name": "Опора амортизатора",
+  "article": "KB67323",
+  "qty": 2,
+  "price": 2309,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "8708809900"
+ },
+ {
+  "car": "Рено 62-14",
+  "name": "Фільтр оливи",
+  "article": "W6025",
+  "qty": 1,
+  "price": 586,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "8421230090"
+ },
+ {
+  "car": "Рено 62-14",
+  "name": "Фільтр повітря",
+  "article": "LX3542",
+  "qty": 1,
+  "price": 567,
+  "manufacturer": "MAHLE",
+  "country": "",
+  "uktzed": "8421310000"
+ },
+ {
+  "car": "Рено 62-14",
+  "name": "Фільтр салону",
+  "article": "LAK891",
+  "qty": 1,
+  "price": 518,
+  "manufacturer": "MAHLE",
+  "country": "",
+  "uktzed": "8421392000"
+ },
+ {
+  "car": "L200",
+  "name": "Гальмівний шланг",
+  "article": "13705079",
+  "qty": 2,
+  "price": 256,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "4009420000"
+ },
+ {
+  "car": "L200",
+  "name": "Трос паркувального гальма",
+  "article": "1987482515",
+  "qty": 1,
+  "price": 1163,
+  "manufacturer": "BOSCH",
+  "country": "",
+  "uktzed": "8708309100"
+ },
+ {
+  "car": "L200",
+  "name": "Трос паркувального гальма",
+  "article": "1987482516",
+  "qty": 1,
+  "price": 1109,
+  "manufacturer": "BOSCH",
+  "country": "",
+  "uktzed": "8708309100"
+ },
+ {
+  "car": "L200",
+  "name": "Ресора задня",
+  "article": "6159211",
+  "qty": 2,
+  "price": 11199,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "7320109000"
+ },
+ {
+  "car": "L200",
+  "name": "Амортизатор задній",
+  "article": "553189",
+  "qty": 2,
+  "price": 2610,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "8708803500"
+ },
+ {
+  "car": "L200",
+  "name": "Скоба",
+  "article": "4150A333",
+  "qty": 2,
+  "price": 1291,
+  "manufacturer": "MITSUBISHI",
+  "country": "",
+  "uktzed": "7318158890"
+ },
+ {
+  "car": "L200 70-91",
+  "name": "Циліндр зчеплення",
+  "article": "CMM8005",
+  "qty": 1,
+  "price": 2328,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "8708939000"
+ },
+ {
+  "car": "L200 70-91",
+  "name": "Диск гальмівний",
+  "article": "0986479363",
+  "qty": 2,
+  "price": 2053,
+  "manufacturer": "BOSCH",
+  "country": "",
+  "uktzed": "8708309100"
+ },
+ {
+  "car": "L200 70-91",
+  "name": "Гальмівні колодки",
+  "article": "0986494268",
+  "qty": 1,
+  "price": 1578,
+  "manufacturer": "BOSCH",
+  "country": "",
+  "uktzed": "8708309100"
+ },
+ {
+  "car": "L200 70-91",
+  "name": "Ремкомплект супорта",
+  "article": "13275003",
+  "qty": 2,
+  "price": 450,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "8708309100"
+ },
+ {
+  "car": "L200 46-32",
+  "name": "Комплект зчеплення",
+  "article": "625310600",
+  "qty": 1,
+  "price": 11993,
+  "manufacturer": "LUK",
+  "country": "",
+  "uktzed": "8708939000"
+ },
+ {
+  "car": "L200 46-32",
+  "name": "Сальник колінвалу",
+  "article": "940640",
+  "qty": 1,
+  "price": 632,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "4016930000"
+ },
+ {
+  "car": "VW 46-14",
+  "name": "Кульова опора",
+  "article": "33697",
+  "qty": 2,
+  "price": 1229,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "8708809900"
+ },
+ {
+  "car": "VW 46-14",
+  "name": "Пильник тяги керма",
+  "article": "33925",
+  "qty": 2,
+  "price": 540,
+  "manufacturer": "",
+  "country": "",
+  "uktzed": "4016995200"
+ }
+]
