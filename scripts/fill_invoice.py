@@ -125,6 +125,31 @@ def resize(ws, start, n, gen, items):
                        end_row=r.max_row + delta, end_column=r.max_col)
 
 
+HEADER_ROW = {"рахунок": 19, "накладна": 16, "Дрюк": 12, "Нагорнюк": 12, "Лозко": 12, "ТОВ Колотір": 12,
+              "пропозиція 1": 15, "пропозиція 2": 5, "пропозиція 3": 13}
+
+
+def print_setup(ws, delta):
+    """Друк: область друку з урахуванням нових рядків, шапка таблиці на кожній сторінці,
+    уся ширина на одну сторінку A4."""
+    dn = ws.defined_names.pop("Print_Area", None)  # у шаблоні область друку — іменований діапазон аркуша
+    m = re.search(r"\$([A-Z]+)\$(\d+)$", dn.attr_text) if dn else None
+    if m:
+        ws.print_area = f"A1:{m.group(1)}{int(m.group(2)) + delta}"
+    else:
+        last = max(c.row for row in ws.iter_rows() for c in row if c.value is not None)
+        ws.print_area = f"A1:{get_column_letter(ws.max_column)}{last}"
+    ws.row_breaks.brk = []  # ручні розриви з шаблону потрапляють посеред таблиці
+    if ws.title in HEADER_ROW:
+        h = HEADER_ROW[ws.title]
+        ws.print_title_rows = f"{h}:{h}"
+    ws.sheet_properties.pageSetUpPr.fitToPage = True
+    ws.page_setup.fitToWidth = 1
+    ws.page_setup.fitToHeight = 0
+    ws.page_setup.paperSize = ws.PAPERSIZE_A4
+    ws.print_options.horizontalCentered = True
+
+
 def find(ws, prefix):
     for row in ws.iter_rows():
         for c in row:
@@ -157,6 +182,8 @@ def main():
     # 2) вставка/видалення рядків і заповнення позицій
     for name, (start, gen) in SHEETS.items():
         resize(wb[name], start, n, gen, items)
+    for ws in wb:
+        print_setup(ws, delta if ws.title in SHEETS else 0)
     # 3) тексти
     total = sum(it["qty"] * it["price"] for it in items)
     tot = {m: sum(it["qty"] * round(it["price"] * m + 1e-9) for it in items) for m in (1.05, 1.08, 1.1)}
