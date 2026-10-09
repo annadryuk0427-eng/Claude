@@ -5,7 +5,7 @@
   "article": "C24011",
   "qty": 1,
   "price": 766,
-  "manufacturer": "MANN",
+  "manufacturer": "MANN-FILTER",
   "country": "Німеччина",
   "uktzed": "8421310000"
  },
@@ -145,8 +145,8 @@
   "article": "DS6101L",
   "qty": 1,
   "price": 3288,
-  "manufacturer": "",
-  "country": "",
+  "manufacturer": "BGA",
+  "country": "Великобританія",
   "uktzed": "8708509900"
  },
  {
@@ -155,8 +155,8 @@
   "article": "DS6101R",
   "qty": 1,
   "price": 4124,
-  "manufacturer": "",
-  "country": "",
+  "manufacturer": "BGA",
+  "country": "Великобританія",
   "uktzed": "8708509900"
  },
  {
@@ -195,8 +195,8 @@
   "article": "841006",
   "qty": 2,
   "price": 7261,
-  "manufacturer": "",
-  "country": "",
+  "manufacturer": "KYB",
+  "country": "Японія",
   "uktzed": "8708803500"
  },
  {
@@ -265,8 +265,8 @@
   "article": "RS5519",
   "qty": 1,
   "price": 183,
-  "manufacturer": "",
-  "country": "",
+  "manufacturer": "VERNET",
+  "country": "Франція",
   "uktzed": "8536508000"
  },
  {
@@ -295,8 +295,8 @@
   "article": "163480",
   "qty": 25,
   "price": 60,
-  "manufacturer": "",
-  "country": "",
+  "manufacturer": "ELRING",
+  "country": "Німеччина",
   "uktzed": "4016930000"
  },
  {
@@ -345,8 +345,8 @@
   "article": "310114",
   "qty": 1,
   "price": 296,
-  "manufacturer": "",
-  "country": "",
+  "manufacturer": "ERT",
+  "country": "Іспанія",
   "uktzed": "8708309100"
  },
  {
@@ -415,7 +415,7 @@
   "article": "HU7008Z",
   "qty": 1,
   "price": 331,
-  "manufacturer": "MANN",
+  "manufacturer": "MANN-FILTER",
   "country": "Німеччина",
   "uktzed": "8421230090"
  },
@@ -435,8 +435,8 @@
   "article": "3184900",
   "qty": 1,
   "price": 1740,
-  "manufacturer": "",
-  "country": "",
+  "manufacturer": "UFI",
+  "country": "Італія",
   "uktzed": "8421230090"
  },
  {
@@ -515,8 +515,8 @@
   "article": "55011623301",
   "qty": 2,
   "price": 101,
-  "manufacturer": "",
-  "country": "",
+  "manufacturer": "VIKA",
+  "country": "Китай",
   "uktzed": "4016995200"
  },
  {
@@ -635,8 +635,8 @@
   "article": "W6025",
   "qty": 1,
   "price": 586,
-  "manufacturer": "",
-  "country": "",
+  "manufacturer": "MANN-FILTER",
+  "country": "Німеччина",
   "uktzed": "8421230090"
  },
  {
@@ -775,8 +775,8 @@
   "article": "940640",
   "qty": 1,
   "price": 632,
-  "manufacturer": "",
-  "country": "",
+  "manufacturer": "ELRING",
+  "country": "Німеччина",
   "uktzed": "4016930000"
  },
  {
