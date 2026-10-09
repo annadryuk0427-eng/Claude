@@ -82,11 +82,11 @@
  {
   "car": "L200 46-17",
   "name": "Кульова опора",
-  "article": "8250422607",
+  "article": "825042210",
   "qty": 2,
   "price": 1145,
-  "manufacturer": "",
-  "country": "",
+  "manufacturer": "FAG",
+  "country": "Німеччина",
   "uktzed": "8708809900"
  },
  {
@@ -132,17 +132,17 @@
  {
   "car": "L200 51-23",
   "name": "Кульова опора",
-  "article": "8250422607",
+  "article": "825042210",
   "qty": 2,
   "price": 1145,
-  "manufacturer": "",
-  "country": "",
+  "manufacturer": "FAG",
+  "country": "Німеччина",
   "uktzed": "8708809900"
  },
  {
   "car": "L200 51-23",
   "name": "Піввісь",
-  "article": "DS6101",
+  "article": "DS6101L",
   "qty": 1,
   "price": 3288,
   "manufacturer": "",
@@ -152,7 +152,7 @@
  {
   "car": "L200 51-23",
   "name": "Піввісь",
-  "article": "DS6101",
+  "article": "DS6101R",
   "qty": 1,
   "price": 4124,
   "manufacturer": "",
@@ -232,11 +232,11 @@
  {
   "car": "L200 46-74",
   "name": "Кульова опора",
-  "article": "8250422607",
+  "article": "825042210",
   "qty": 2,
   "price": 1145,
-  "manufacturer": "",
-  "country": "",
+  "manufacturer": "FAG",
+  "country": "Німеччина",
   "uktzed": "8708809900"
  },
  {
@@ -262,7 +262,7 @@
  {
   "car": "VW 47-07",
   "name": "Вимикач ліхтаря",
-  "article": "A35519",
+  "article": "RS5519",
   "qty": 1,
   "price": 183,
   "manufacturer": "",
@@ -662,11 +662,11 @@
  {
   "car": "L200",
   "name": "Гальмівний шланг",
-  "article": "13705079",
+  "article": "J3705079",
   "qty": 2,
   "price": 256,
-  "manufacturer": "",
-  "country": "",
+  "manufacturer": "JAKOPARTS",
+  "country": "Німеччина",
   "uktzed": "4009420000"
  },
  {
@@ -752,11 +752,11 @@
  {
   "car": "L200 70-91",
   "name": "Ремкомплект супорта",
-  "article": "13275003",
+  "article": "J3275003",
   "qty": 2,
   "price": 450,
-  "manufacturer": "",
-  "country": "",
+  "manufacturer": "JAKOPARTS",
+  "country": "Німеччина",
   "uktzed": "8708309100"
  },
  {
