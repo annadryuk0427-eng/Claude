@@ -1,0 +1,17 @@
+{% extends "admin/base.html" %}
+{% block content %}
+<div class="row-between"><h1>Постачальники</h1><a class="btn" href="/admin/suppliers/new">+ Додати</a></div>
+<div class="table-wrap">
+<table class="offers">
+  <thead><tr><th>Назва</th><th>Код</th><th>Тип</th><th>Націнка</th><th>Доставка</th><th>Позицій</th><th>Оновлено</th><th>Активний</th></tr></thead>
+  {% for s in suppliers %}
+  <tr>
+    <td><a href="/admin/suppliers/{{ s.id }}"><b>{{ s.name }}</b></a></td>
+    <td class="mono">{{ s.code }}</td><td>{{ 'API' if s.kind == 'api' else 'Прайс' }}</td>
+    <td>{{ s.markup_pct }}%</td><td>{{ s.delivery_days }} дн.</td><td>{{ s.n_offers }}</td>
+    <td>{{ s.last_import or '—' }}</td><td>{{ '✔' if s.active else '—' }}</td>
+  </tr>
+  {% else %}<tr><td colspan="8" class="muted">Додайте першого постачальника</td></tr>{% endfor %}
+</table>
+</div>
+{% endblock %}

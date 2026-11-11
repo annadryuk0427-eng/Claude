@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Адмінка · {{ SHOP_NAME }}</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="admin">
+<header class="top">
+  <div class="wrap top-row">
+    <a class="logo" href="/admin">⚙ Адмінка</a>
+    <nav>
+      <a href="/admin">Замовлення</a>
+      <a href="/admin/suppliers">Постачальники</a>
+      <a href="/admin/markups">Націнки</a>
+      <a href="/admin/catalog">Каталог</a>
+      <a href="/admin/settings">Налаштування</a>
+      <a href="/" target="_blank">Сайт ↗</a>
+      <a href="/admin/logout">Вийти</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+{% if msg %}<div class="msg">{{ msg }}</div>{% endif %}
+{% block content %}{% endblock %}
+</main>
+</body>
+</html>

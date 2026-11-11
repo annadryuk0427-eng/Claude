@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% from "_offers.html" import offers_table %}
+{% block title %}Підбір за авто · {{ SHOP_NAME }}{% endblock %}
+{% block content %}
+<nav class="crumbs">
+  <a href="/catalog">Марки</a>
+  {% if make %} › <a href="/catalog?make={{ make.id }}">{{ make.name }}</a>{% endif %}
+  {% if model %} › <a href="/catalog?make={{ make.id }}&model={{ model.id }}">{{ model.name }} {{ model.year_from or '' }}–{{ model.year_to or '' }} {{ model.engine }}</a>{% endif %}
+  {% if category %} › {{ category.name }}{% endif %}
+</nav>
+
+{% if not make %}
+  <h1>Оберіть марку</h1>
+  <div class="tiles">{% for m in makes %}<a class="tile" href="/catalog?make={{ m.id }}">{{ m.name }}</a>{% else %}<p class="muted">Каталог порожній.</p>{% endfor %}</div>
+{% elif not model %}
+  <h1>{{ make.name }}: оберіть модель</h1>
+  <div class="tiles">
+  {% for m in models %}
+    <a class="tile" href="/catalog?make={{ make.id }}&model={{ m.id }}">{{ m.name }}<small>{{ m.year_from or '' }}–{{ m.year_to or 'н.ч.' }} {{ m.engine }}</small></a>
+  {% endfor %}
+  </div>
+{% elif not category %}
+  <h1>{{ make.name }} {{ model.name }}: оберіть групу</h1>
+  <div class="tiles">
+  {% for c in categories %}
+    <a class="tile" href="/catalog?make={{ make.id }}&model={{ model.id }}&category={{ c.id }}">{{ c.name }}<small>{{ c.n }} деталей</small></a>
+  {% else %}<p class="muted">Для цієї моделі ще немає деталей.</p>{% endfor %}
+  </div>
+{% else %}
+  <h1>{{ category.name }} — {{ make.name }} {{ model.name }}</h1>
+  {% if parts %}{{ offers_table(parts, "/catalog?make=" ~ make.id ~ "&model=" ~ model.id ~ "&category=" ~ category.id, True) }}
+  {% else %}<p class="muted">Зараз немає в наявності.</p>{% endif %}
+{% endif %}
+{% endblock %}

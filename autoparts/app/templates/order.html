@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Замовлення №{{ order.id }} · {{ SHOP_NAME }}{% endblock %}
+{% block content %}
+<div class="card">
+<h1>Дякуємо! Замовлення №{{ order.id }} прийнято</h1>
+<p>Статус: <b>{{ ORDER_STATUSES[order.status] }}</b>{% if order.ttn %} · ТТН Нової Пошти: <b class="mono">{{ order.ttn }}</b>{% endif %}</p>
+<p>Ми зв'яжемося з вами за номером {{ order.phone }} для підтвердження.</p>
+<table class="offers">
+  {% for i in items %}<tr><td>{{ i.brand }} <span class="mono">{{ i.article }}</span> {{ i.name }}</td><td>× {{ i.qty }}</td><td class="price">{{ (i.qty * i.price_sell)|uah }}</td></tr>{% endfor %}
+  <tr><td colspan="2"><b>Разом</b></td><td class="price">{{ order.total|uah }}</td></tr>
+</table>
+<p>Доставка: {{ order.city }}, {{ order.np_branch }}</p>
+{% if order.payment_status == 'paid' %}<p class="ok">Оплачено ✔</p>
+{% elif liqpay %}
+<form method="post" action="{{ liqpay_url }}" accept-charset="utf-8">
+  <input type="hidden" name="data" value="{{ liqpay.data }}">
+  <input type="hidden" name="signature" value="{{ liqpay.signature }}">
+  <button class="btn">Оплатити карткою {{ order.total|uah }}</button>
+</form>
+{% elif order.payment_method == 'cod' %}<p>Оплата при отриманні у відділенні Нової Пошти.</p>{% endif %}
+</div>
+{% endblock %}

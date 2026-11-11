@@ -1,0 +1,18 @@
+{% extends "admin/base.html" %}
+{% block content %}
+<h1>Налаштування</h1>
+<form method="post" class="card form">
+  <label>Адреса сайту (для LiqPay), напр. https://autoparts.ua<input name="site_url" value="{{ values.site_url }}"></label>
+  <label>Телефон магазину<input name="shop_phone" value="{{ values.shop_phone }}"></label>
+  <fieldset><legend>Нова Пошта</legend>
+    <label>API-ключ (кабінет НП → Налаштування → Безпека)<input name="np_api_key" value="{{ values.np_api_key }}"></label></fieldset>
+  <fieldset><legend>LiqPay</legend>
+    <label>Public key<input name="liqpay_public_key" value="{{ values.liqpay_public_key }}"></label>
+    <label>Private key<input name="liqpay_private_key" type="password" value="{{ values.liqpay_private_key }}"></label>
+    <label>Тестовий режим (1 = так)<input name="liqpay_sandbox" value="{{ values.liqpay_sandbox }}"></label></fieldset>
+  <fieldset><legend>Сповіщення в Telegram про нові замовлення</legend>
+    <label>Bot token<input name="telegram_bot_token" type="password" value="{{ values.telegram_bot_token }}"></label>
+    <label>Chat ID<input name="telegram_chat_id" value="{{ values.telegram_chat_id }}"></label></fieldset>
+  <button class="btn">Зберегти</button>
+</form>
+{% endblock %}

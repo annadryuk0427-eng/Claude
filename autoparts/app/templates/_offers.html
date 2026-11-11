@@ -1,0 +1,27 @@
+{% macro offers_table(rows, back, show_count=False) %}
+<div class="table-wrap">
+<table class="offers result">
+  <thead><tr><th>Бренд</th><th>Артикул</th><th>Назва</th><th>Наявність</th><th>Доставка</th><th>Ціна</th><th></th></tr></thead>
+  <tbody>
+  {% for o in rows %}
+    <tr>
+      <td><b>{{ o.brand }}</b></td>
+      <td class="mono">{{ o.article }}</td>
+      <td>{{ o.name }}{% if show_count and o.n_offers > 1 %} <small class="muted">({{ o.n_offers }} пропозицій)</small>{% endif %}</td>
+      <td>{% if o.qty > 10 %}&gt;10 шт{% elif o.qty > 0 %}{{ o.qty }} шт{% else %}<span class="muted">під замовлення</span>{% endif %}</td>
+      <td>{% if o.days <= 1 %}1 день{% else %}{{ o.days }} дн.{% endif %}</td>
+      <td class="price">{{ o.sell|uah }}</td>
+      <td>
+        <form method="post" action="/cart/add" class="add">
+          <input type="hidden" name="offer_id" value="{{ o.id }}">
+          <input type="hidden" name="back" value="{{ back }}">
+          <input type="number" name="qty" value="1" min="1" max="{{ o.qty if o.qty > 0 else 99 }}">
+          <button>У кошик</button>
+        </form>
+      </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endmacro %}

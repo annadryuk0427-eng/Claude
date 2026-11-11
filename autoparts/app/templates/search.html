@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% from "_offers.html" import offers_table %}
+{% block title %}{{ q }} — пошук · {{ SHOP_NAME }}{% endblock %}
+{% block content %}
+<h1>Результати за «{{ q }}»</h1>
+{% set back = "/search?q=" ~ q|urlencode %}
+{% if exact %}<h2>Запитаний артикул</h2>{{ offers_table(exact, back) }}{% endif %}
+{% if analogs %}<h2>Аналоги (замінники)</h2>{{ offers_table(analogs, back) }}{% endif %}
+{% if by_name %}<h2>Збіги за назвою</h2>{{ offers_table(by_name, back) }}{% endif %}
+{% if not exact and not analogs and not by_name %}
+<div class="empty">
+  <p>Нічого не знайдено. Перевірте артикул або залиште заявку — підберемо вручну.</p>
+</div>
+{% endif %}
+{% endblock %}

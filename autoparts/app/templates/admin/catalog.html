@@ -1,0 +1,21 @@
+{% extends "admin/base.html" %}
+{% block content %}
+<h1>Каталог</h1>
+<div class="stats">
+  {% for k, lbl in [('offers','Пропозицій'),('makes','Марок'),('models','Моделей'),('categories','Груп'),('applicability','Застосовність'),('crosses','Кросів')] %}
+  <div class="card"><small>{{ lbl }}</small><b>{{ counts[k] }}</b></div>
+  {% endfor %}
+</div>
+<div class="grid2">
+<form method="post" action="/admin/catalog/applicability" enctype="multipart/form-data" class="card form">
+  <h3>Підбір за авто (застосовність)</h3>
+  <p class="muted">CSV/XLSX з заголовком і колонками:<br><code>марка; модель; рік_від; рік_до; двигун; група; бренд; артикул</code></p>
+  <input type="file" name="file" required><button class="btn">Імпортувати</button>
+</form>
+<form method="post" action="/admin/catalog/crosses" enctype="multipart/form-data" class="card form">
+  <h3>Аналоги (кроси)</h3>
+  <p class="muted">CSV/XLSX з заголовком і колонками:<br><code>бренд1; артикул1; бренд2; артикул2</code></p>
+  <input type="file" name="file" required><button class="btn">Імпортувати</button>
+</form>
+</div>
+{% endblock %}

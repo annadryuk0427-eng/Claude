@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Оформлення · {{ SHOP_NAME }}{% endblock %}
+{% block content %}
+<h1>Оформлення замовлення</h1>
+<div class="grid2">
+<form method="post" action="/checkout" class="card form">
+  <label>Ім'я та прізвище отримувача*<input name="customer_name" required></label>
+  <label>Телефон*<input name="phone" type="tel" placeholder="+380..." required pattern=".*\d.*\d.*\d.*\d.*\d.*\d.*\d.*\d.*\d.*\d.*"></label>
+  <label>Email<input name="email" type="email"></label>
+  <label>Місто (Нова Пошта)*<input name="city" id="city" list="city-list" autocomplete="off" required></label>
+  <datalist id="city-list"></datalist>
+  <input type="hidden" id="city_ref">
+  <label>Відділення / поштомат*<input name="np_branch" id="branch" list="branch-list" autocomplete="off" required></label>
+  <datalist id="branch-list"></datalist>
+  <fieldset>
+    <legend>Оплата</legend>
+    <label class="radio"><input type="radio" name="payment_method" value="cod" checked> Накладений платіж (оплата при отриманні)</label>
+    {% if liqpay_enabled %}<label class="radio"><input type="radio" name="payment_method" value="liqpay"> Карткою онлайн (LiqPay)</label>{% endif %}
+  </fieldset>
+  <label>Коментар (VIN, побажання)<textarea name="comment" rows="3"></textarea></label>
+  <button class="btn">Підтвердити замовлення на {{ total|uah }}</button>
+</form>
+<aside class="card">
+  <h3>Ваше замовлення</h3>
+  {% for l in lines %}<p>{{ l.brand }} {{ l.article }} × {{ l.cart_qty }} — <b>{{ l.line_total|uah }}</b></p>{% endfor %}
+  <p class="total">Разом: <b>{{ total|uah }}</b></p>
+</aside>
+</div>
+{% if np_enabled %}
+<script>
+const city = document.getElementById('city'), branch = document.getElementById('branch');
+let cities = [], timer;
+city.addEventListener('input', () => {
+  clearTimeout(timer);
+  timer = setTimeout(async () => {
+    cities = await (await fetch('/api/np/cities?q=' + encodeURIComponent(city.value))).json();
+    document.getElementById('city-list').innerHTML = cities.map(c => `<option value="${c.name}">`).join('');
+  }, 300);
+});
+city.addEventListener('change', async () => {
+  const c = cities.find(c => c.name === city.value);
+  if (!c) return;
+  const ws = await (await fetch('/api/np/warehouses?city_ref=' + c.ref)).json();
+  document.getElementById('branch-list').innerHTML = ws.map(w => `<option value="${w.name.replace(/"/g, '&quot;')}">`).join('');
+});
+</script>
+{% endif %}
+{% endblock %}

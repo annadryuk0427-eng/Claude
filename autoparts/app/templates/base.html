@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}{{ SHOP_NAME }} — автозапчастини{% endblock %}</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="logo" href="/">🔧 {{ SHOP_NAME }}</a>
+    <form class="search" action="/search">
+      <input name="q" value="{{ q|default('') }}" placeholder="Артикул або назва, напр. W712/75" required>
+      <button>Знайти</button>
+    </form>
+    <nav>
+      <a href="/catalog">Підбір за авто</a>
+      <a href="/cart" class="cart-link">Кошик{% if cart_count %} <b>{{ cart_count }}</b>{% endif %}</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+{% block content %}{% endblock %}
+</main>
+<footer class="wrap foot">© {{ SHOP_NAME }} · Доставка Новою Поштою по всій Україні</footer>
+</body>
+</html>

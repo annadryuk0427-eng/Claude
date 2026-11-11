@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Кошик · {{ SHOP_NAME }}{% endblock %}
+{% block content %}
+<h1>Кошик</h1>
+{% if lines %}
+<form method="post" action="/cart/update">
+<div class="table-wrap">
+<table class="offers">
+  <thead><tr><th>Деталь</th><th>Ціна</th><th>Кількість</th><th>Сума</th></tr></thead>
+  <tbody>
+  {% for l in lines %}
+  <tr>
+    <td><b>{{ l.brand }}</b> <span class="mono">{{ l.article }}</span><br><small>{{ l.name }}</small></td>
+    <td>{{ l.sell|uah }}</td>
+    <td><input type="number" name="qty_{{ l.id }}" value="{{ l.cart_qty }}" min="0" class="qty"></td>
+    <td class="price">{{ l.line_total|uah }}</td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+<div class="cart-foot">
+  <button class="secondary">Оновити (0 — видалити)</button>
+  <div class="total">Разом: <b>{{ total|uah }}</b></div>
+  <a class="btn" href="/checkout">Оформити замовлення</a>
+</div>
+</form>
+{% else %}
+<p class="muted">Кошик порожній. <a href="/">Знайти деталь</a></p>
+{% endif %}
+{% endblock %}

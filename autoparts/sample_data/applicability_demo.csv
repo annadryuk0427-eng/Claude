@@ -1,0 +1,9 @@
+make;model;year_from;year_to;engine;category;brand;article
+Volkswagen;Golf IV;1997;2006;1.4 16V;Фільтри;MANN-FILTER;W 712/75
+Volkswagen;Golf IV;1997;2006;1.4 16V;Фільтри;FILTRON;OP 641
+Volkswagen;Golf IV;1997;2006;1.4 16V;Гальмівна система;TRW;GDB1550
+Volkswagen;Golf IV;1997;2006;1.4 16V;Гальмівна система;BOSCH;0 986 494 024
+Volkswagen;Golf IV;1997;2006;1.4 16V;ГРМ;SKF;VKMA 01250
+Volkswagen;Golf IV;1997;2006;1.4 16V;Підвіска;FEBI BILSTEIN;22261
+Skoda;Octavia A4;1996;2010;1.4;Фільтри;MANN-FILTER;W 712/75
+Skoda;Octavia A4;1996;2010;1.4;Фільтри;MANN-FILTER;C 27 192/1

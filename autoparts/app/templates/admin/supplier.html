@@ -1,0 +1,42 @@
+{% extends "admin/base.html" %}
+{% block content %}
+<h1>{{ s.name if s else 'Новий постачальник' }}</h1>
+<div class="grid2">
+<form method="post" action="/admin/suppliers/{{ s.id if s else 'new' }}" class="card form">
+  <label>Назва<input name="name" value="{{ s.name if s else '' }}" required></label>
+  <label>Код (латиницею; «omega» підключає адаптер Омеги)<input name="code" value="{{ s.code if s else '' }}" required pattern="[a-z0-9_-]+"></label>
+  <label>Тип<select name="kind">
+    <option value="pricelist" {% if s and s.kind == 'pricelist' %}selected{% endif %}>Прайс-лист (CSV/XLSX)</option>
+    <option value="api" {% if s and s.kind == 'api' %}selected{% endif %}>API (живий пошук)</option></select></label>
+  <label>Націнка, %<input name="markup_pct" type="number" step="0.1" value="{{ s.markup_pct if s else 25 }}"></label>
+  <label>Термін доставки від постачальника, днів<input name="delivery_days" type="number" value="{{ s.delivery_days if s else 1 }}"></label>
+  <label>Email для замовлень<input name="email" value="{{ s.email if s else '' }}"></label>
+  <label class="radio"><input type="checkbox" name="active" {% if not s or s.active %}checked{% endif %}> Активний (показувати пропозиції)</label>
+  <fieldset>
+    <legend>Назви колонок у прайсі (порожньо = автовизначення)</legend>
+    {% for k, lbl in [('brand','Бренд'),('article','Артикул'),('name','Назва'),('price','Ціна'),('qty','Кількість'),('delivery_days','Термін')] %}
+    <label>{{ lbl }}<input name="col_{{ k }}" value="{{ cmap.get(k, '') }}"></label>
+    {% endfor %}
+  </fieldset>
+  <label>api_config (JSON: pricelist_url, api_url, login, api_key…)
+    <textarea name="api_config" rows="4" class="mono">{{ s.api_config if s else '{}' }}</textarea></label>
+  <button class="btn">Зберегти</button>
+</form>
+{% if s %}
+<div>
+  <form method="post" action="/admin/suppliers/{{ s.id }}/import" enctype="multipart/form-data" class="card form">
+    <h3>Завантажити прайс</h3>
+    <p class="muted">CSV або XLSX. Старі позиції цього постачальника буде замінено.</p>
+    <input type="file" name="file" accept=".csv,.txt,.xlsx" required>
+    <button class="btn">Імпортувати</button>
+  </form>
+  <form method="post" action="/admin/suppliers/{{ s.id }}/fetch" class="card form">
+    <h3>Оновити з посилання</h3>
+    <p class="muted">Бере файл з <code>pricelist_url</code> в api_config.</p>
+    <button class="btn secondary">Завантажити зараз</button>
+  </form>
+  <div class="card"><p>Останнє оновлення: {{ s.last_import or '—' }}</p></div>
+</div>
+{% endif %}
+</div>
+{% endblock %}

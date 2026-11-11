@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <h1>Автозапчастини з доставкою по Україні</h1>
+  <p>Шукайте за каталожним номером — покажемо оригінал та аналоги від перевірених складів.</p>
+  <form class="search big" action="/search">
+    <input name="q" placeholder="Введіть артикул, напр. OC 90 або 0 986 452 041" required autofocus>
+    <button>Знайти</button>
+  </form>
+  <p class="muted">У базі {{ n_offers }} пропозицій</p>
+</section>
+<section>
+  <h2>Підбір за автомобілем</h2>
+  {% if makes %}
+  <div class="tiles">
+    {% for m in makes %}<a class="tile" href="/catalog?make={{ m.id }}">{{ m.name }}</a>{% endfor %}
+  </div>
+  {% else %}<p class="muted">Каталог авто ще не заповнено.</p>{% endif %}
+</section>
+{% endblock %}

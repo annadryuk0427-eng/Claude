@@ -1,0 +1,48 @@
+{% extends "admin/base.html" %}
+{% block content %}
+<h1>Замовлення №{{ order.id }} <small class="muted">{{ order.created_at }}</small></h1>
+<div class="grid2">
+<div class="card">
+  <p><b>{{ order.customer_name }}</b>, <a href="tel:{{ order.phone }}">{{ order.phone }}</a> {{ order.email }}</p>
+  <p>НП: {{ order.city }}, {{ order.np_branch }}</p>
+  {% if order.comment %}<p>Коментар: {{ order.comment }}</p>{% endif %}
+  <p>Сума: <b>{{ order.total|uah }}</b> · Закупівля: {{ cost|uah }} · Прибуток: <b>{{ (order.total - cost)|uah }}</b></p>
+</div>
+<form method="post" class="card form">
+  <label>Статус<select name="status">{% for k, v in ORDER_STATUSES.items() %}<option value="{{ k }}" {% if k == order.status %}selected{% endif %}>{{ v }}</option>{% endfor %}</select></label>
+  <label>Оплата ({{ 'накладений платіж' if order.payment_method == 'cod' else 'LiqPay' }})
+    <select name="payment_status">{% for k in ['pending', 'paid', 'failure', 'refunded'] %}<option {% if k == order.payment_status %}selected{% endif %}>{{ k }}</option>{% endfor %}</select></label>
+  <label>ТТН Нової Пошти<input name="ttn" value="{{ order.ttn }}"></label>
+  <button class="btn">Зберегти</button>
+</form>
+</div>
+
+<h2>Позиції по постачальниках</h2>
+{% for (sid, sname), items in groups.items() %}
+<div class="card">
+  <div class="row-between">
+    <h3>{{ sname }}</h3>
+    <div>
+      <a class="btn secondary" href="/admin/orders/{{ order.id }}/supplier/{{ sid }}.csv">CSV для постачальника</a>
+      <form method="post" action="/admin/orders/{{ order.id }}/send/{{ sid }}" style="display:inline"><button class="btn">Передати через API</button></form>
+    </div>
+  </div>
+  <table class="offers">
+    <thead><tr><th>Деталь</th><th>К-сть</th><th>Закупівля</th><th>Продаж</th><th>Статус у постачальника</th></tr></thead>
+    {% for i in items %}
+    <tr>
+      <td><b>{{ i.brand }}</b> <span class="mono">{{ i.article }}</span><br><small>{{ i.name }}</small></td>
+      <td>{{ i.qty }}</td><td>{{ i.price_in }}</td><td>{{ i.price_sell|uah }}</td>
+      <td>
+        <form method="post" action="/admin/orders/{{ order.id }}/items/{{ i.id }}" class="inline">
+          <select name="supplier_status">{% for k, v in SUPPLIER_ITEM_STATUSES.items() %}<option value="{{ k }}" {% if k == i.supplier_status %}selected{% endif %}>{{ v }}</option>{% endfor %}</select>
+          <input name="supplier_ref" value="{{ i.supplier_ref }}" placeholder="№ у постачальника" size="12">
+          <button>OK</button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+{% endfor %}
+{% endblock %}

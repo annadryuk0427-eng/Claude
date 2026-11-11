@@ -1,0 +1,3 @@
+data/*.db
+data/uploads/
+.env

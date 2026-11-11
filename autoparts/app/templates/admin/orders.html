@@ -1,0 +1,30 @@
+{% extends "admin/base.html" %}
+{% block content %}
+{% if default_password %}<div class="msg err">Увага: стандартний пароль «admin». Задайте змінну середовища ADMIN_PASSWORD.</div>{% endif %}
+<div class="stats">
+  <div class="card"><small>Замовлень</small><b>{{ stats.n }}</b></div>
+  <div class="card"><small>Оборот</small><b>{{ stats.revenue|uah }}</b></div>
+  <div class="card"><small>Валовий прибуток</small><b>{{ stats.margin|uah }}</b></div>
+</div>
+<h1>Замовлення</h1>
+<p class="filters"><a href="/admin" {% if not status %}class="on"{% endif %}>Усі</a>
+{% for k, v in ORDER_STATUSES.items() %}<a href="/admin?status={{ k }}" {% if status == k %}class="on"{% endif %}>{{ v }}</a>{% endfor %}</p>
+<div class="table-wrap">
+<table class="offers">
+  <thead><tr><th>№</th><th>Дата</th><th>Клієнт</th><th>Доставка</th><th>Оплата</th><th>Сума</th><th>Статус</th></tr></thead>
+  <tbody>
+  {% for o in orders %}
+  <tr>
+    <td><a href="/admin/orders/{{ o.id }}"><b>{{ o.id }}</b></a></td>
+    <td>{{ o.created_at[:16] }}</td>
+    <td>{{ o.customer_name }}<br><small>{{ o.phone }}</small></td>
+    <td><small>{{ o.city }}<br>{{ o.np_branch }}</small></td>
+    <td>{{ 'Накладений' if o.payment_method == 'cod' else 'LiqPay' }}<br><small>{{ o.payment_status }}</small></td>
+    <td class="price">{{ o.total|uah }}</td>
+    <td><span class="badge s-{{ o.status }}">{{ ORDER_STATUSES[o.status] }}</span></td>
+  </tr>
+  {% else %}<tr><td colspan="7" class="muted">Замовлень поки немає</td></tr>{% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}

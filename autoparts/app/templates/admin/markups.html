@@ -1,0 +1,19 @@
+{% extends "admin/base.html" %}
+{% block content %}
+<h1>Правила націнки</h1>
+<p class="muted">Застосовується перше правило, що підходить: спершу правила для бренду, потім загальні (за діапазоном закупівельної ціни). Якщо жодне не підходить — націнка постачальника.</p>
+<table class="offers">
+  <thead><tr><th>Бренд</th><th>Ціна від, грн</th><th>до, грн</th><th>Націнка</th><th></th></tr></thead>
+  {% for r in rules %}
+  <tr><td>{{ r.brand_norm or 'будь-який' }}</td><td>{{ r.min_price }}</td><td>{{ '∞' if r.max_price >= 1e11 else r.max_price }}</td><td><b>{{ r.pct }}%</b></td>
+    <td><form method="post" action="/admin/markups/{{ r.id }}/delete"><button class="secondary">Видалити</button></form></td></tr>
+  {% else %}<tr><td colspan="5" class="muted">Правил немає — діє націнка постачальника</td></tr>{% endfor %}
+</table>
+<form method="post" class="card form inline-form">
+  <label>Бренд (необов'язково)<input name="brand"></label>
+  <label>Ціна від<input name="min_price" type="number" step="0.01" value="0"></label>
+  <label>до<input name="max_price" type="number" step="0.01" value="1000000000"></label>
+  <label>Націнка, %<input name="pct" type="number" step="0.1" required></label>
+  <button class="btn">Додати</button>
+</form>
+{% endblock %}
