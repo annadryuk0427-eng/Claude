@@ -1,0 +1,122 @@
+<title>Запчастини ВЧ А0222</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: ведомість деталей — шапка з підсумком, панель фільтрів, групи за машиною з підсумком кожної */
+:root{
+  --bg:#f3f4f0; --surface:#ffffff; --fg:#1d221b; --muted:#5f685b; --line:#d9ddd2;
+  --accent:#4a5a24; --accent-soft:#e6ead9; --mark:#f2d27a;
+  --f-display:"Archivo","Arial Narrow",system-ui,sans-serif;
+  --f-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#151813; --surface:#1d211a; --fg:#e7eadf; --muted:#9aa38f; --line:#30362b;
+  --accent:#b5c77a; --accent-soft:#2a3220; --mark:#6b5a1e; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#151813; --surface:#1d211a; --fg:#e7eadf; --muted:#9aa38f; --line:#30362b;
+  --accent:#b5c77a; --accent-soft:#2a3220; --mark:#6b5a1e; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font:15px/1.5 var(--f-body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px 48px}
+.wrap{max-width:1080px;margin:0 auto;display:grid;gap:24px}
+header{display:grid;gap:16px}
+.eyebrow{font:500 12px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1{font:800 clamp(28px,5vw,44px)/1.05 var(--f-display);font-stretch:80%;margin:0;text-wrap:balance}
+.stats{display:flex;flex-wrap:wrap;gap:8px 32px;font-variant-numeric:tabular-nums}
+.stat b{display:block;font:700 22px/1.2 var(--f-display);font-stretch:85%}
+.stat span{font-size:13px;color:var(--muted)}
+.tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:10px;border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+input,select{font:inherit;color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:8px 12px}
+input:focus-visible,select:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+#q{flex:1 1 240px;min-width:0}
+.group{display:grid;gap:0}
+.ghead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;padding:8px 0;border-bottom:2px solid var(--fg)}
+.ghead h2{margin:0;font:700 20px/1.2 var(--f-display);font-stretch:85%}
+.plate{font:500 13px var(--f-mono);background:var(--accent-soft);color:var(--accent);padding:2px 8px;border-radius:4px;margin-left:8px;vertical-align:2px}
+.ghead .sub{font-variant-numeric:tabular-nums;color:var(--muted);font-size:14px}
+.ghead .sub b{color:var(--fg)}
+.tbl{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+th{font:500 11px/1.2 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:left;padding:10px 8px;border-bottom:1px solid var(--line)}
+td{padding:9px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+.num{text-align:right;white-space:nowrap}
+.art{font:500 13px var(--f-mono);background:none;border:0;color:var(--accent);padding:0;cursor:pointer;text-align:left;word-break:break-all}
+.art:hover{text-decoration:underline}
+.brand{font-weight:600}
+.small{font-size:13px;color:var(--muted)}
+mark{background:var(--mark);color:inherit;border-radius:2px}
+.empty{padding:32px 0;color:var(--muted);text-align:center}
+.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:2px solid var(--fg);padding-top:12px;font:700 20px var(--f-display);font-stretch:85%;font-variant-numeric:tabular-nums}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:8px 16px;border-radius:6px;font-size:14px;opacity:0;transition:opacity .2s;pointer-events:none}
+.toast.on{opacity:1}
+@media (max-width:640px){
+  thead{display:none}
+  table,tbody,tr,td{display:block}
+  tr{padding:10px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:2px 12px}
+  td{border:0;padding:0}
+  td.c-n{display:none}
+  td.c-name{grid-column:1/-1;font-weight:600}
+  td.c-uk,td.c-q,td.c-p{display:none}
+  td.c-s{grid-row:span 2;align-self:center}
+}
+@media (prefers-reduced-motion:reduce){.toast{transition:none}}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">ВЧ А0222 · запчастини з блокнота, 12–17 травня</div>
+    <h1>Відомість запчастин за машинами</h1>
+    <div class="stats" id="stats"></div>
+  </header>
+  <div class="tools">
+    <input id="q" type="search" placeholder="Пошук: назва, артикул, бренд…" aria-label="Пошук">
+    <select id="car" aria-label="Машина"><option value="">Усі машини</option></select>
+  </div>
+  <main id="list" class="wrap"></main>
+  <div class="foot"><span>Разом за вибраним</span><span id="total"></span></div>
+  <p class="small">Ціни в гривнях за одиницю, сума = кількість × ціна. Натисніть артикул, щоб скопіювати.</p>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+const ITEMS = [{"car": "L200 70-91", "name": "Фільтр повітря", "article": "C24011", "qty": 1, "price": 766, "manufacturer": "MANN-FILTER", "country": "Німеччина", "uktzed": "8421310000"}, {"car": "L200 70-91", "name": "Фільтр палива", "article": "KX268D", "qty": 1, "price": 477, "manufacturer": "MAHLE", "country": "Німеччина", "uktzed": "8421230090"}, {"car": "L200 46-61", "name": "Фільтр повітря", "article": "1987429186", "qty": 1, "price": 757, "manufacturer": "BOSCH", "country": "Німеччина", "uktzed": "8421310000"}, {"car": "L200 46-61", "name": "Фільтр палива", "article": "KC46", "qty": 1, "price": 651, "manufacturer": "MAHLE", "country": "Німеччина", "uktzed": "8421230090"}, {"car": "L200 46-61", "name": "Фільтр оливи", "article": "OC540", "qty": 1, "price": 629, "manufacturer": "MAHLE", "country": "Німеччина", "uktzed": "8421230090"}, {"car": "Паджеро 51-44", "name": "Фільтр повітря", "article": "2005508", "qty": 1, "price": 426, "manufacturer": "ASHIKA", "country": "Італія", "uktzed": "8421310000"}, {"car": "Паджеро 51-44", "name": "Фільтр палива", "article": "F026402086", "qty": 1, "price": 1041, "manufacturer": "BOSCH", "country": "Німеччина", "uktzed": "8421230090"}, {"car": "Паджеро 51-44", "name": "Фільтр оливи", "article": "OC297", "qty": 1, "price": 855, "manufacturer": "MAHLE", "country": "Німеччина", "uktzed": "8421230090"}, {"car": "L200 46-17", "name": "Кульова опора", "article": "825042210", "qty": 2, "price": 1145, "manufacturer": "FAG", "country": "Німеччина", "uktzed": "8708809900"}, {"car": "L200 46-17", "name": "Сайлентблок важеля", "article": "872607", "qty": 4, "price": 691, "manufacturer": "SIDEM", "country": "Бельгія", "uktzed": "4016995200"}, {"car": "L200 46-17", "name": "Стійка стабілізатора", "article": "VKDS845503", "qty": 1, "price": 532, "manufacturer": "SKF", "country": "Швеція", "uktzed": "8708809900"}, {"car": "L200 46-17", "name": "Стійка стабілізатора", "article": "VKDS845502", "qty": 1, "price": 531, "manufacturer": "SKF", "country": "Швеція", "uktzed": "8708809900"}, {"car": "L200 46-17", "name": "Втулка стабілізатора", "article": "872801", "qty": 2, "price": 163, "manufacturer": "SIDEM", "country": "Бельгія", "uktzed": "4016995200"}, {"car": "L200 51-23", "name": "Кульова опора", "article": "825042210", "qty": 2, "price": 1145, "manufacturer": "FAG", "country": "Німеччина", "uktzed": "8708809900"}, {"car": "L200 51-23", "name": "Піввісь", "article": "DS6101L", "qty": 1, "price": 3288, "manufacturer": "BGA", "country": "Великобританія", "uktzed": "8708509900"}, {"car": "L200 51-23", "name": "Піввісь", "article": "DS6101R", "qty": 1, "price": 4124, "manufacturer": "BGA", "country": "Великобританія", "uktzed": "8708509900"}, {"car": "L200 51-23", "name": "Стійка стабілізатора", "article": "VKDS845502", "qty": 1, "price": 532, "manufacturer": "SKF", "country": "Швеція", "uktzed": "8708809900"}, {"car": "L200 51-23", "name": "Стійка стабілізатора", "article": "VKDS845503", "qty": 1, "price": 531, "manufacturer": "SKF", "country": "Швеція", "uktzed": "8708809900"}, {"car": "L200 51-23", "name": "Втулка стабілізатора", "article": "872801", "qty": 2, "price": 163, "manufacturer": "SIDEM", "country": "Бельгія", "uktzed": "4016995200"}, {"car": "L200 51-23", "name": "Амортизатор передній", "article": "841006", "qty": 2, "price": 7261, "manufacturer": "KYB", "country": "Японія", "uktzed": "8708803500"}, {"car": "L200 51-23", "name": "Амортизатор задній", "article": "553189", "qty": 2, "price": 2610, "manufacturer": "KYB", "country": "Японія", "uktzed": "8708803500"}, {"car": "L200 46-74", "name": "Втулка стабілізатора", "article": "872801", "qty": 2, "price": 163, "manufacturer": "SIDEM", "country": "Бельгія", "uktzed": "4016995200"}, {"car": "L200 46-74", "name": "Тяга кермова", "article": "SR7950", "qty": 2, "price": 662, "manufacturer": "555", "country": "Японія", "uktzed": "8708949000"}, {"car": "L200 46-74", "name": "Кульова опора", "article": "825042210", "qty": 2, "price": 1145, "manufacturer": "FAG", "country": "Німеччина", "uktzed": "8708809900"}, {"car": "L200 46-74", "name": "Кульова опора", "article": "VKDS815501", "qty": 2, "price": 582, "manufacturer": "SKF", "country": "Швеція", "uktzed": "8708809900"}, {"car": "VW 47-07", "name": "Фільтр оливи", "article": "0451203087", "qty": 1, "price": 431, "manufacturer": "BOSCH", "country": "Німеччина", "uktzed": "8421230090"}, {"car": "VW 47-07", "name": "Вимикач ліхтаря", "article": "RS5519", "qty": 1, "price": 183, "manufacturer": "VERNET", "country": "Франція", "uktzed": "8536508000"}, {"car": "VW 47-07", "name": "Важіль склоочисника", "article": "2190453", "qty": 1, "price": 1577, "manufacturer": "METZGER", "country": "Німеччина", "uktzed": "8512909000"}, {"car": "VW 47-07", "name": "Важіль склоочисника", "article": "2190454", "qty": 1, "price": 1589, "manufacturer": "METZGER", "country": "Німеччина", "uktzed": "8512909000"}, {"car": "VW 47-07", "name": "Кільце гумове ущільнювальне", "article": "163480", "qty": 25, "price": 60, "manufacturer": "ELRING", "country": "Німеччина", "uktzed": "4016930000"}, {"car": "L200 47-32", "name": "Опора двигуна", "article": "GOM501", "qty": 2, "price": 741, "manufacturer": "ASHIKA", "country": "Італія", "uktzed": "4016995200"}, {"car": "L200 47-32", "name": "Опора двигуна", "article": "GOM504", "qty": 1, "price": 438, "manufacturer": "ASHIKA", "country": "Італія", "uktzed": "4016995200"}, {"car": "L200 47-32", "name": "Опора двигуна", "article": "80102146", "qty": 1, "price": 4873, "manufacturer": "CORTECO", "country": "Німеччина", "uktzed": "4016995200"}, {"car": "Ford 63-43", "name": "Гальмівний барабан", "article": "2831-S", "qty": 2, "price": 1940, "manufacturer": "A.B.S.", "country": "Нідерланди", "uktzed": "8708309100"}, {"car": "Ford 63-43", "name": "Монтажний комплект колодок", "article": "310114", "qty": 1, "price": 296, "manufacturer": "ERT", "country": "Іспанія", "uktzed": "8708309100"}, {"car": "Ford 63-43", "name": "Гальмівні колодки", "article": "FSB4164", "qty": 1, "price": 2242, "manufacturer": "FERODO", "country": "Великобританія", "uktzed": "8708309100"}, {"car": "Сітроен 49-08", "name": "Амортизатор передній", "article": "3348139", "qty": 2, "price": 3771, "manufacturer": "KYB", "country": "Японія", "uktzed": "8708803500"}, {"car": "Сітроен 49-08", "name": "Захисний комплект амортизатора", "article": "VKDP33328T", "qty": 1, "price": 921, "manufacturer": "SKF", "country": "Швеція", "uktzed": "4016995200"}, {"car": "Сітроен 49-08", "name": "Накінечник керма", "article": "3937801", "qty": 1, "price": 937, "manufacturer": "LEMFORDER", "country": "Німеччина", "uktzed": "8708949000"}, {"car": "Сітроен 49-08", "name": "Накінечник керма", "article": "3937901", "qty": 1, "price": 941, "manufacturer": "LEMFORDER", "country": "Німеччина", "uktzed": "8708949000"}, {"car": "Сітроен 49-08", "name": "Опора двигуна", "article": "9826533880", "qty": 1, "price": 8160, "manufacturer": "CITROEN", "country": "Франція", "uktzed": "4016995200"}, {"car": "VW 61-92", "name": "Фільтр оливи", "article": "HU7008Z", "qty": 1, "price": 331, "manufacturer": "MANN-FILTER", "country": "Німеччина", "uktzed": "8421230090"}, {"car": "VW 61-92", "name": "Фільтр повітря", "article": "LX786", "qty": 1, "price": 564, "manufacturer": "MAHLE", "country": "Німеччина", "uktzed": "8421310000"}, {"car": "VW 61-92", "name": "Фільтр палива", "article": "3184900", "qty": 1, "price": 1740, "manufacturer": "UFI", "country": "Італія", "uktzed": "8421230090"}, {"car": "VW 61-92", "name": "Фільтр салону", "article": "7E0819631", "qty": 1, "price": 1410, "manufacturer": "VAG", "country": "Німеччина", "uktzed": "8421392000"}, {"car": "VW 50-18", "name": "Заглушка", "article": "N50813202", "qty": 1, "price": 264, "manufacturer": "VAG", "country": "Німеччина", "uktzed": "7318159000"}, {"car": "VW 50-18", "name": "Гальмівні колодки", "article": "FVR1642", "qty": 1, "price": 2149, "manufacturer": "FERODO", "country": "Великобританія", "uktzed": "8708309100"}, {"car": "VW 50-18", "name": "Сайлентблок важеля", "article": "829062910", "qty": 2, "price": 483, "manufacturer": "FAG", "country": "Німеччина", "uktzed": "4016995200"}, {"car": "VW 50-18", "name": "Сайлентблок важеля", "article": "829063010", "qty": 2, "price": 511, "manufacturer": "FAG", "country": "Німеччина", "uktzed": "4016995200"}, {"car": "VW 50-18", "name": "Втулка стабілізатора", "article": "42175", "qty": 2, "price": 322, "manufacturer": "LEMFORDER", "country": "Німеччина", "uktzed": "4016995200"}, {"car": "VW 50-18", "name": "Втулка стабілізатора", "article": "7H0511413A", "qty": 2, "price": 780, "manufacturer": "VAG", "country": "Німеччина", "uktzed": "4016995200"}, {"car": "VW 50-18", "name": "Упор", "article": "55011623301", "qty": 2, "price": 101, "manufacturer": "VIKA", "country": "Китай", "uktzed": "4016995200"}, {"car": "VW 50-18", "name": "Підкладка пружини", "article": "7H0511149C", "qty": 2, "price": 2010, "manufacturer": "VAG", "country": "Німеччина", "uktzed": "4016995200"}, {"car": "VW 50-18", "name": "Підкладка пружини", "article": "7E0511150B", "qty": 2, "price": 684, "manufacturer": "VAG", "country": "Німеччина", "uktzed": "4016995200"}, {"car": "VW 50-18", "name": "Тяга кермова", "article": "27986", "qty": 1, "price": 3032, "manufacturer": "LEMFORDER", "country": "Німеччина", "uktzed": "8708949000"}, {"car": "VW 50-18", "name": "Тяга кермова", "article": "27987", "qty": 1, "price": 3029, "manufacturer": "LEMFORDER", "country": "Німеччина", "uktzed": "8708949000"}, {"car": "VW 50-18", "name": "Пильник тяги керма", "article": "3361601", "qty": 2, "price": 301, "manufacturer": "LEMFORDER", "country": "Німеччина", "uktzed": "4016995200"}, {"car": "L200 77-60", "name": "Гальмівні колодки", "article": "0986494268", "qty": 1, "price": 1578, "manufacturer": "BOSCH", "country": "Німеччина", "uktzed": "8708309100"}, {"car": "L200 77-60", "name": "Пильник амортизатора", "article": "MR992325", "qty": 2, "price": 510, "manufacturer": "MITSUBISHI", "country": "Японія", "uktzed": "4016995200"}, {"car": "L200 77-60", "name": "Відбійник амортизатора", "article": "MB303069", "qty": 2, "price": 910, "manufacturer": "MITSUBISHI", "country": "Японія", "uktzed": "4016995200"}, {"car": "L200 77-60", "name": "Втулка ресори", "article": "MB584531", "qty": 4, "price": 144, "manufacturer": "MITSUBISHI", "country": "Японія", "uktzed": "4016995200"}, {"car": "L200 77-60", "name": "Опора амортизатора", "article": "107414", "qty": 2, "price": 1044, "manufacturer": "FEBI", "country": "Німеччина", "uktzed": "8708809900"}, {"car": "L200 77-60", "name": "Опора амортизатора", "article": "KB67323", "qty": 2, "price": 2309, "manufacturer": "SNR", "country": "Франція", "uktzed": "8708809900"}, {"car": "Рено 62-14", "name": "Фільтр оливи", "article": "W6025", "qty": 1, "price": 586, "manufacturer": "MANN-FILTER", "country": "Німеччина", "uktzed": "8421230090"}, {"car": "Рено 62-14", "name": "Фільтр повітря", "article": "LX3542", "qty": 1, "price": 567, "manufacturer": "MAHLE", "country": "Німеччина", "uktzed": "8421310000"}, {"car": "Рено 62-14", "name": "Фільтр салону", "article": "LAK891", "qty": 1, "price": 518, "manufacturer": "MAHLE", "country": "Німеччина", "uktzed": "8421392000"}, {"car": "L200", "name": "Гальмівний шланг", "article": "J3705079", "qty": 2, "price": 256, "manufacturer": "JAKOPARTS", "country": "Німеччина", "uktzed": "4009420000"}, {"car": "L200", "name": "Трос паркувального гальма", "article": "1987482515", "qty": 1, "price": 1163, "manufacturer": "BOSCH", "country": "Німеччина", "uktzed": "8708309100"}, {"car": "L200", "name": "Трос паркувального гальма", "article": "1987482516", "qty": 1, "price": 1109, "manufacturer": "BOSCH", "country": "Німеччина", "uktzed": "8708309100"}, {"car": "L200", "name": "Ресора задня", "article": "6159211", "qty": 2, "price": 11199, "manufacturer": "LESJOFORS", "country": "Швеція", "uktzed": "7320109000"}, {"car": "L200", "name": "Амортизатор задній", "article": "553189", "qty": 2, "price": 2610, "manufacturer": "KYB", "country": "Японія", "uktzed": "8708803500"}, {"car": "L200", "name": "Скоба", "article": "4150A333", "qty": 2, "price": 1291, "manufacturer": "MITSUBISHI", "country": "Японія", "uktzed": "7318158890"}, {"car": "L200 70-91", "name": "Циліндр зчеплення", "article": "CMMS005", "qty": 1, "price": 2328, "manufacturer": "AISIN", "country": "Японія", "uktzed": "8708939000"}, {"car": "L200 70-91", "name": "Диск гальмівний", "article": "0986479363", "qty": 2, "price": 2053, "manufacturer": "BOSCH", "country": "Німеччина", "uktzed": "8708309100"}, {"car": "L200 70-91", "name": "Гальмівні колодки", "article": "0986494268", "qty": 1, "price": 1578, "manufacturer": "BOSCH", "country": "Німеччина", "uktzed": "8708309100"}, {"car": "L200 70-91", "name": "Ремкомплект супорта", "article": "J3275003", "qty": 2, "price": 450, "manufacturer": "JAKOPARTS", "country": "Німеччина", "uktzed": "8708309100"}, {"car": "L200 46-32", "name": "Комплект зчеплення", "article": "625310600", "qty": 1, "price": 11993, "manufacturer": "LUK", "country": "Німеччина", "uktzed": "8708939000"}, {"car": "L200 46-32", "name": "Сальник колінвалу", "article": "940640", "qty": 1, "price": 632, "manufacturer": "ELRING", "country": "Німеччина", "uktzed": "4016930000"}, {"car": "VW 46-14", "name": "Кульова опора", "article": "33697", "qty": 2, "price": 1229, "manufacturer": "LEMFORDER", "country": "Німеччина", "uktzed": "8708809900"}, {"car": "VW 46-14", "name": "Пильник тяги керма", "article": "33925", "qty": 2, "price": 540, "manufacturer": "LEMFORDER", "country": "Німеччина", "uktzed": "4016995200"}];
+const fmt = n => n.toLocaleString('uk-UA',{minimumFractionDigits:2,maximumFractionDigits:2}) + ' грн';
+const esc = s => String(s ?? '').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function split(car){const m=car.match(/^(.*?)\s+(\d{2}-\d{2})$/);return m?[m[1],m[2]]:[car,''];}
+const cars=[...new Set(ITEMS.map(i=>i.car))].sort((a,b)=>a.localeCompare(b,'uk'));
+const sel=document.getElementById('car');
+cars.forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c;sel.append(o)});
+const sum=a=>a.reduce((s,i)=>s+i.qty*i.price,0);
+document.getElementById('stats').innerHTML=
+  `<div class="stat"><b>${ITEMS.length}</b><span>позицій</span></div>`+
+  `<div class="stat"><b>${cars.length}</b><span>машин</span></div>`+
+  `<div class="stat"><b>${ITEMS.reduce((s,i)=>s+i.qty,0)}</b><span>штук</span></div>`+
+  `<div class="stat"><b>${fmt(sum(ITEMS))}</b><span>загальна сума</span></div>`;
+function hl(text,q){const t=esc(text);if(!q)return t;const i=t.toLowerCase().indexOf(esc(q).toLowerCase());
+  return i<0?t:t.slice(0,i)+'<mark>'+t.slice(i,i+esc(q).length)+'</mark>'+t.slice(i+esc(q).length);}
+function render(){
+  const q=document.getElementById('q').value.trim().toLowerCase(), c=sel.value;
+  const f=ITEMS.filter(i=>(!c||i.car===c)&&(!q||[i.name,i.article,i.manufacturer,i.country,i.uktzed,i.car].join(' ').toLowerCase().includes(q)));
+  const groups=cars.filter(car=>f.some(i=>i.car===car));
+  let n=0;
+  document.getElementById('list').innerHTML = groups.length? groups.map(car=>{
+    const rows=f.filter(i=>i.car===car), [m,p]=split(car);
+    return `<section class="group"><div class="ghead"><h2>${esc(m)}${p?`<span class="plate">${p}</span>`:''}</h2>
+      <span class="sub">${rows.length} поз. · <b>${fmt(sum(rows))}</b></span></div>
+      <div class="tbl"><table><thead><tr><th>№</th><th>Найменування</th><th>Артикул</th><th>Виробник</th><th>УКТЗЕД</th><th class="num">К-сть</th><th class="num">Ціна</th><th class="num">Сума</th></tr></thead><tbody>
+      ${rows.map(i=>`<tr><td class="c-n small">${++n}</td><td class="c-name">${hl(i.name,q)}</td>
+        <td><button class="art" data-a="${esc(i.article)}" title="Скопіювати артикул">${hl(i.article,q)}</button></td>
+        <td><span class="brand">${hl(i.manufacturer,q)}</span> <span class="small">${esc(i.country)}</span></td>
+        <td class="c-uk small">${esc(i.uktzed)}</td><td class="c-q num">${i.qty} шт</td><td class="c-p num">${fmt(i.price)}</td>
+        <td class="c-s num"><b>${fmt(i.qty*i.price)}</b>${i.qty>1?`<div class="small">${i.qty} × ${i.price}</div>`:''}</td></tr>`).join('')}
+      </tbody></table></div></section>`}).join('') : '<p class="empty">Нічого не знайдено. Спробуйте інший запит або оберіть «Усі машини».</p>';
+  document.getElementById('total').textContent=fmt(sum(f));
+}
+let tt;function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('on'),1600)}
+document.getElementById('list').addEventListener('click',e=>{const b=e.target.closest('.art');if(!b)return;
+  const a=b.dataset.a;navigator.clipboard?.writeText(a).then(()=>toast('Скопійовано: '+a),()=>{const r=document.createRange();r.selectNodeContents(b);const s=getSelection();s.removeAllRanges();s.addRange(r);toast('Виділено — натисніть Ctrl+C')}) ?? toast(a)});
+document.getElementById('q').addEventListener('input',render);
+sel.addEventListener('change',render);
+render();
+</script>
